@@ -3,10 +3,10 @@ require_once './vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 setlocale(LC_CTYPE, "en_US.UTF-8");
 $configs = Yaml::parse(file_get_contents('./config.yml'));
-if (empty($configs) || empty($configs['1OZId+sFxEGTDwVCcggP4aC+02i2aEsD3K0cVwHM8T1jzPz7IHgwuDPSTgePqcn0OyiWvIVCRsWWPIqhpni3EvOhTfFIUGb7m0JYVDOXtl94+VR+AlAsKXzsMQ0emuumJ+4g4V4Mp6qCi+RAYY+E0AdB04t89/1O/w1cDnyilFU='])) {
+if (empty($configs) || empty($configs['channel_token'])) {
   return;
 }
-$channel_token = $configs['1OZId+sFxEGTDwVCcggP4aC+02i2aEsD3K0cVwHM8T1jzPz7IHgwuDPSTgePqcn0OyiWvIVCRsWWPIqhpni3EvOhTfFIUGb7m0JYVDOXtl94+VR+AlAsKXzsMQ0emuumJ+4g4V4Mp6qCi+RAYY+E0AdB04t89/1O/w1cDnyilFU='];
+$channel_token = $configs['channel_token'];
 $body = file_get_contents('php://input');
 $json = json_decode($body, true);
 if (empty($json)) {
