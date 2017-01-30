@@ -5,10 +5,7 @@ $access_token = '1OZId+sFxEGTDwVCcggP4aC+02i2aEsD3K0cVwHM8T1jzPz7IHgwuDPSTgePqcn
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-// Validate parsed JSON dat
-  "type": "sticker",
-  "packageId": "1",
-  "stickerId": "1"
+// Validate parsed JSON date
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
