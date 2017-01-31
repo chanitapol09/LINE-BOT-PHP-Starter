@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 			$messages = [
   			      	'type' => 'image',
  				'originalContentUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
-  				//'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
+  				'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
   		 	];
 			}
   
