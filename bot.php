@@ -25,6 +25,18 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
+			
+			  $post_data = [
+  			  'replyToken' => $replyToken,
+  			  'messages' => [
+    					  [
+       				 'type' => 'image',
+       				 'originalContentUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
+      			  'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
+    			 		 ],
+  				  ]
+			  ];
+			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
