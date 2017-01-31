@@ -15,14 +15,13 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
+			if ($text == 'beer'){
 			$messages = [
-				
-      
-  			      'type' => 'image',
+  			      	'type' => 'image',
  				'originalContentUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
-  				'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
+  				//'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
   		 	];
- 				     
+			}
   
 			
 			// Make a POST Request to Messaging API to reply to sender
