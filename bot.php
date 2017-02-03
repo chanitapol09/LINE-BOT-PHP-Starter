@@ -15,7 +15,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
-			if ($text == 'beer'){
+			if ($text == 'Beer'){
 			$messages = [
   			      	'type' => 'image',
  				'originalContentUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
