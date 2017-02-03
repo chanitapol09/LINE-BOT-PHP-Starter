@@ -22,6 +22,11 @@ if (!is_null($events['events'])) {
   				'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
   		 	];
 			}
+			
+			$messages = [
+				'type' => 'text',
+				'text' => $text
+			];
   
 			
 			// Make a POST Request to Messaging API to reply to sender
